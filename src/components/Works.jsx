@@ -42,6 +42,7 @@ export default function Works() {
     stickyOuter.style.height = `${totalScroll}px`;
 
     let animationFrameId;
+    let lastActiveIdx = -1;
 
     const handleScroll = () => {
       const rect = stickyOuter.getBoundingClientRect();
@@ -54,7 +55,7 @@ export default function Works() {
 
       // Dynamically measure properties to ensure perfect positioning across devices
       const firstCard = cardsRef.current[0];
-      const actualWidth = firstCard ? firstCard.offsetWidth : (window.innerWidth <= 900 ? 320 : 520);
+      const actualWidth = firstCard ? firstCard.offsetWidth : 520;
       const CARD_GAP = 48; 
       const STEP = actualWidth + CARD_GAP;
       
@@ -66,7 +67,12 @@ export default function Works() {
       track.style.transform = `translate3d(${-tx}px, 0, 0)`;
       
       const newActiveIdx = Math.round(floatIndex);
-      setActiveIdx(newActiveIdx);
+
+      // Only trigger React re-render when active card actually changes
+      if (newActiveIdx !== lastActiveIdx) {
+        lastActiveIdx = newActiveIdx;
+        setActiveIdx(newActiveIdx);
+      }
 
       cardsRef.current.forEach((card, i) => {
         if (!card) return;
@@ -76,7 +82,7 @@ export default function Works() {
         let opacity = 1 - (dist * 0.5);
         if (opacity < 0.2) opacity = 0.2;
         
-        card.style.transform = `scale(${scale})`;
+        card.style.transform = `scale3d(${scale},${scale},1)`;
         card.style.opacity = opacity;
         
         if (i === newActiveIdx) {
