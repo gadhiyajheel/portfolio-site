@@ -1,0 +1,25 @@
+#services { padding: 8rem 3rem; max-width: 1400px; margin: 0 auto; }
+.services-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.2rem;
+  margin-top: 4rem;
+}
+.service-card {
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px; padding: 2.5rem 2rem;
+  backdrop-filter: blur(12px);
+  transition: all .4s; position: relative; overflow: hidden;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(180,180,180,0.2);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3), 0 0 30px rgba(150,150,150,0.04);
+}
+.service-num {
+  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 3rem;
+  opacity: 0.06; position: absolute; top: 1rem; right: 1.5rem;
+  line-height: 1;
+}
+.service-icon { font-size: 2rem; margin-bottom: 1.2rem; }
+.service-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.1rem; margin-bottom: .7rem; }
+.service-desc { font-size: .82rem; color: rgba(245,247,255,0.5); line-height: 1.6; }

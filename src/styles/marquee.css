@@ -1,0 +1,16 @@
+.marquee-wrap {
+  overflow: hidden; padding: 1.2rem 0;
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+  background: rgba(255,255,255,0.02);
+}
+.marquee-track {
+  display: flex; white-space: nowrap;
+  animation: marqueeScroll 20s linear infinite;
+}
+.marquee-track span {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(245,247,255,0.2); padding: 0 3rem;
+}
+.marquee-track span.accent { color: #888; }

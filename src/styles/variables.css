@@ -1,0 +1,12 @@
+:root {
+  --black: #050505;
+  --deep: #0D0D12;
+  --surface: #15151D;
+  --soft-glow: #F5F7FF;
+  --glass-fill: rgba(255,255,255,0.06);
+  --glass-border: rgba(255,255,255,0.12);
+  --chrome: linear-gradient(120deg, #d9d9d9, #ffffff, #bfbfbf, #8f8f8f);
+  --accent: #c0c0c0;
+  --accent2: #888888;
+  --accent3: #aaaaaa;
+}

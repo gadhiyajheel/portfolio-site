@@ -1,0 +1,80 @@
+@media (max-width: 900px) {
+  /* Navigation */
+  nav { padding: 1.5rem; justify-content: center; width: 100%; }
+  .nav-logo { font-size: 0.8rem; letter-spacing: 0.15em; text-align: center; }
+  .nav-links { display: none; }
+  
+  /* Global section rules for mobile */
+  section {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+  
+  .section-label, .section-title, .hero-sub, .about-body, .works-header, #videos {
+    text-align: center !important;
+    align-items: center;
+  }
+  
+  /* Section specific overrides */
+  #hero { text-align: center; padding: 0 1.5rem; }
+  .about-inner { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
+  .about-visual { max-width: 340px; margin: 0 auto; }
+  
+  #about, #skills, #services, #contact { padding: 6rem 1.5rem; }
+  .works-header { padding: 6rem 1.5rem 2rem; }
+  #videos { padding: 6rem 1.5rem; }
+  
+  /* Grids and Flexbox */
+  .about-stats { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; justify-content: center; }
+  .skills-software { grid-template-columns: 1fr; }
+  .skills-creative-area { justify-content: center; }
+  .services-grid { justify-content: center; }
+  .hero-ctas { justify-content: center; }
+  
+  /* Works Carousel Mobile Safe Fixes */
+  .works-sticky-outer {
+    height: auto !important;
+    padding-bottom: 2rem;
+  }
+  .works-sticky-inner {
+    position: relative;
+    height: auto;
+    overflow: hidden !important; /* Forces the internal scrolling track to stay inside the screen */
+    width: 100%;
+    display: block !important; /* override desktop flex */
+  }
+  .works-track-wrap {
+    transform: none !important;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    padding: 2rem 7.5vw; /* Perfectly centers the first and last card */
+    gap: 1.5rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    will-change: auto;
+  }
+  .works-track-wrap::-webkit-scrollbar { display: none; }
+
+  .poster-card { 
+    flex: 0 0 85vw; 
+    scroll-snap-align: center;
+    transform: none !important;
+    opacity: 1 !important;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5); border-color: rgba(180,180,180,0.15);
+  }
+  .poster-card .poster-img-wrap { width: 100%; }
+  .poster-card .poster-img { filter: grayscale(0) brightness(1); }
+  .works-counter { display: none; }
+
+  footer { 
+    padding: 2rem 1.5rem; 
+    flex-direction: column; 
+    text-align: center; 
+    gap: 1.5rem; 
+    justify-content: center; 
+  }
+  .footer-socials { justify-content: center; margin-top: .5rem; }
+}
