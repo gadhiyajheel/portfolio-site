@@ -28,7 +28,7 @@ export default function App() {
       touchMultiplier: 2,
     });
 
-    const skewElements = gsap.utils.toArray('.service-card, .video-card, .skill-bar-card, .stat-card');
+    const skewElements = gsap.utils.toArray('.service-card, .skill-bar-card, .stat-card');
 
     lenis.on('scroll', (e) => {
       ScrollTrigger.update();
