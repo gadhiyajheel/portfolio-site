@@ -32,6 +32,9 @@ export default function Works() {
     const track = trackRef.current;
     if (!stickyOuter || !track) return;
 
+    // Mobile uses native CSS scroll-snap, so we skip JS scroll mapping
+    if (window.innerWidth <= 900) return;
+
     const N = POSTERS.length;
     const SCROLL_PER = 300;
 

@@ -4,9 +4,13 @@ import { useGSAP } from '@gsap/react';
 
 export default function Skills() {
   useGSAP(() => {
-    const bars = gsap.utils.toArray('.skill-bar');
-    bars.forEach((bar) => {
-      const targetPct = bar.getAttribute('data-pct');
+    const cards = gsap.utils.toArray('.skill-bar-card');
+    cards.forEach((card) => {
+      const bar = card.querySelector('.skill-bar');
+      const label = card.querySelector('.skill-pct-label');
+      const targetPct = parseInt(bar.getAttribute('data-pct'), 10);
+
+      // Bar width animation
       gsap.fromTo(bar,
         { width: '0%' },
         {
@@ -15,7 +19,26 @@ export default function Skills() {
           delay: 0.2,
           ease: 'expo.out',
           scrollTrigger: {
-            trigger: bar,
+            trigger: card, // trigger on the whole card
+            start: 'top 90%',
+          }
+        }
+      );
+
+      // Number counter animation
+      gsap.fromTo(label,
+        { innerHTML: 0 },
+        {
+          innerHTML: targetPct,
+          duration: 1.8,
+          delay: 0.2,
+          ease: 'expo.out',
+          snap: { innerHTML: 1 },
+          onUpdate: function() {
+            label.innerHTML = Math.round(label.innerHTML) + '%';
+          },
+          scrollTrigger: {
+            trigger: card,
             start: 'top 90%',
           }
         }

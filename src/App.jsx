@@ -28,7 +28,29 @@ export default function App() {
       touchMultiplier: 2,
     });
 
-    lenis.on('scroll', ScrollTrigger.update);
+    const skewElements = gsap.utils.toArray('.service-card, .video-card, .skill-bar-card, .stat-card');
+
+    lenis.on('scroll', (e) => {
+      ScrollTrigger.update();
+      
+      if (window.innerWidth <= 900) {
+        if (skewElements.length > 0) gsap.set(skewElements, { skewY: 0 });
+        return;
+      }
+      
+      // Calculate a constrained velocity for skewing 
+      const vel = Math.max(-10, Math.min(10, e.velocity * 0.3));
+      
+      if (skewElements.length > 0) {
+        gsap.to(skewElements, {
+          skewY: vel,
+          duration: 0.3,
+          ease: 'power3.out',
+          overwrite: 'auto'
+        });
+      }
+    });
+
     gsap.ticker.add((time) => {
       lenis.raf(time * 1000);
     });

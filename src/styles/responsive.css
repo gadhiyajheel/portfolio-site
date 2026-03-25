@@ -10,9 +10,14 @@
     padding-right: 1.5rem !important;
   }
   
-  .section-label, .section-title, .hero-sub, .about-body, .works-header, #videos {
+  .section-label, .hero-sub, .about-body, .works-header, #videos {
     text-align: center !important;
     align-items: center;
+  }
+  
+  .section-title {
+    text-align: center !important;
+    margin-bottom: 2rem !important;
   }
   
   /* Section specific overrides */
