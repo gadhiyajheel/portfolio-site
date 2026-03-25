@@ -1,13 +1,13 @@
 import React, { useRef } from 'react';
 
 const VIDEO_DATA = [
-  { id: 1, src: "azdsgvgbazdbg.mp4", tag: "Edit", title: "AZDSGVGBAZDBG" },
-  { id: 2, src: "bablu ka edit.mp4", tag: "Edit", title: "BABLU KA EDIT" },
-  { id: 3, src: "cha bbg.mp4", tag: "Edit", title: "CHA BBG" },
-  { id: 4, src: "final ds.mp4", tag: "Cinematic", title: "FINAL DS" },
-  { id: 5, src: "muzhaat final_1.mp4", tag: "Cinematic", title: "MUZHAAT FINAL 1" },
-  { id: 6, src: "toji hell yeah.mp4", tag: "AMV", title: "TOJI HELL YEAH" },
-  { id: 7, src: "zorooooo.mp4", tag: "AMV", title: "ZOROOOOO" }
+  { id: 1, src: "azdsgvgbazdbg.mp4", tag: "Edit", title: "RETRO" },
+  { id: 2, src: "bablu ka edit.mp4", tag: "Edit", title: "SLOW SHUTTER" },
+  { id: 3, src: "cha bbg.mp4", tag: "Edit", title: "GLITCHY" },
+  { id: 4, src: "final ds.mp4", tag: "Cinematic", title: "FAST AMV" },
+  { id: 5, src: "muzhaat final_1.mp4", tag: "Cinematic", title: "AMV" },
+  { id: 6, src: "toji hell yeah.mp4", tag: "AMV", title: "BEATSYNC" },
+  { id: 7, src: "zorooooo.mp4", tag: "AMV", title: "MONOCHROME" }
 ];
 
 function VideoCard({ src, tag, title }) {
