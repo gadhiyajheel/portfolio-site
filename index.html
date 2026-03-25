@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JEEL GADHIYA — Creative Designer</title>
+  <meta name="description"
+    content="Portfolio of Jeel Gadhiya — Creative Designer, Visual Storyteller, and Poster Artist. Turning ideas into visuals that stop the scroll.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="src/styles/variables.css">
+  <link rel="stylesheet" href="src/styles/base.css">
+  <link rel="stylesheet" href="src/styles/animations.css">
+  <link rel="stylesheet" href="src/styles/cursor.css">
+  <link rel="stylesheet" href="src/styles/nav.css">
+  <link rel="stylesheet" href="src/styles/hero.css">
+  <link rel="stylesheet" href="src/styles/marquee.css">
+  <link rel="stylesheet" href="src/styles/works.css">
+  <link rel="stylesheet" href="src/styles/videos.css">
+  <link rel="stylesheet" href="src/styles/about.css">
+  <link rel="stylesheet" href="src/styles/skills.css">
+  <link rel="stylesheet" href="src/styles/services.css">
+  <link rel="stylesheet" href="src/styles/contact.css">
+  <link rel="stylesheet" href="src/styles/footer.css">
+  <link rel="stylesheet" href="src/styles/responsive.css">
+
+  <!-- GSAP + ScrollTrigger (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <!-- Lenis Smooth Scroll (CDN) -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer></script>
+</head>
+
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <div id="cursor-orb"></div>
+
+  <!-- NAV -->
+  <nav>
+    <span class="nav-logo">JEEL GADHIYA</span>
+    <ul class="nav-links">
+      <li><a href="#works" class="hoverable">Works</a></li>
+      <li><a href="#videos" class="hoverable">Videos</a></li>
+      <li><a href="#about" class="hoverable">About</a></li>
+      <li><a href="#skills" class="hoverable">Skills</a></li>
+      <li><a href="#contact" class="hoverable">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-orb"></div>
+    <div class="hero-eyebrow">Creative Designer · Visual Storyteller · Poster Artist</div>
+    <h1 class="hero-title">
+      <span class="chrome-text">PORTFOLIO</span><br>
+      <span class="glow-text">SHOWCASE</span>
+    </h1>
+    <p class="hero-sub">Turning ideas into visuals that stop the scroll. Design that doesn't just look good — it feels
+      like something.</p>
+    <div class="hero-ctas">
+      <a href="#works" class="btn-primary hoverable">View Work</a>
+      <a href="#contact" class="btn-secondary hoverable">Get in Touch</a>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>Poster Design</span><span class="accent">✦</span>
+      <span>Video Editing</span><span class="accent">✦</span>
+      <span>Visual Identity</span><span class="accent">✦</span>
+      <span>Photoshop</span><span class="accent">✦</span>
+      <span>After Effects</span><span class="accent">✦</span>
+      <span>Typography</span><span class="accent">✦</span>
+      <span>Color Grading</span><span class="accent">✦</span>
+      <span>Motion Graphics</span><span class="accent">✦</span>
+      <!-- duplicate for seamless loop -->
+      <span>Poster Design</span><span class="accent">✦</span>
+      <span>Video Editing</span><span class="accent">✦</span>
+      <span>Visual Identity</span><span class="accent">✦</span>
+      <span>Photoshop</span><span class="accent">✦</span>
+      <span>After Effects</span><span class="accent">✦</span>
+      <span>Typography</span><span class="accent">✦</span>
+      <span>Color Grading</span><span class="accent">✦</span>
+      <span>Motion Graphics</span><span class="accent">✦</span>
+    </div>
+  </div>
+
+  <div class="glow-divider"></div>
+
+  <!-- WORKS — SCROLL-DRIVEN HORIZONTAL CAROUSEL -->
+  <section id="works">
+    <div class="works-header">
+      <div class="section-label reveal">Selected Works</div>
+      <h2 class="section-title reveal reveal-delay-1">Posters that <em>tell stories</em></h2>
+    </div>
+
+    <!-- Sticky scroll container -->
+    <div class="works-sticky-outer" id="worksStickyOuter">
+      <div class="works-sticky-inner" id="worksStickyInner">
+        <div class="works-track-wrap" id="worksTrack">
+
+          <div class="poster-card hoverable">
+            <div class="poster-img-wrap">
+              <img class="poster-img" src="BRUTALISM.jpg" alt="Brutalism Poster" loading="lazy">
+              <div class="poster-depth-layer"></div>
+            </div>
+            <div class="poster-card-overlay"></div>
+            <div class="poster-card-info">
+              <span class="poster-card-tag">Typography</span>
+              <div class="poster-card-name">BRUTALISM</div>
+            </div>
+          </div>
+
+          <div class="poster-card hoverable">
+            <div class="poster-img-wrap">
+              <img class="poster-img" src="Ethereal-2.jpg" alt="Ethereal Poster" loading="lazy">
+              <div class="poster-depth-layer"></div>
+            </div>
+            <div class="poster-card-overlay"></div>
+            <div class="poster-card-info">
+              <span class="poster-card-tag">Aesthetic</span>
+              <div class="poster-card-name">ETHEREAL</div>
+            </div>
+          </div>
+
+          <div class="poster-card hoverable">
+            <div class="poster-img-wrap">
+              <img class="poster-img" src="Hell.1.jpg" alt="Hell Poster" loading="lazy">
+              <div class="poster-depth-layer"></div>
+            </div>
+            <div class="poster-card-overlay"></div>
+            <div class="poster-card-info">
+              <span class="poster-card-tag">Dark Art</span>
+              <div class="poster-card-name">HELL</div>
+            </div>
+          </div>
+
+          <div class="poster-card hoverable">
+            <div class="poster-img-wrap">
+              <img class="poster-img" src="Nokia-4.jpg" alt="Nokia Poster" loading="lazy">
+              <div class="poster-depth-layer"></div>
+            </div>
+            <div class="poster-card-overlay"></div>
+            <div class="poster-card-info">
+              <span class="poster-card-tag">Retro Tech</span>
+              <div class="poster-card-name">NOKIA</div>
+            </div>
+          </div>
+
+          <div class="poster-card hoverable">
+            <div class="poster-img-wrap">
+              <img class="poster-img" src="Tornado.jpg" alt="Tornado Poster" loading="lazy">
+              <div class="poster-depth-layer"></div>
+            </div>
+            <div class="poster-card-overlay"></div>
+            <div class="poster-card-info">
+              <span class="poster-card-tag">Nature</span>
+              <div class="poster-card-name">TORNADO</div>
+            </div>
+          </div>
+
+          <div class="poster-card hoverable">
+            <div class="poster-img-wrap">
+              <img class="poster-img" src="arctic mokeys-4.png" alt="Arctic Monkeys Poster" loading="lazy">
+              <div class="poster-depth-layer"></div>
+            </div>
+            <div class="poster-card-overlay"></div>
+            <div class="poster-card-info">
+              <span class="poster-card-tag">Music</span>
+              <div class="poster-card-name">ARCTIC MONKEYS</div>
+            </div>
+          </div>
+
+          <div class="poster-card hoverable">
+            <div class="poster-img-wrap">
+              <img class="poster-img" src="chasma.png" alt="Chasma Poster" loading="lazy">
+              <div class="poster-depth-layer"></div>
+            </div>
+            <div class="poster-card-overlay"></div>
+            <div class="poster-card-info">
+              <span class="poster-card-tag">Editorial</span>
+              <div class="poster-card-name">CHASMA</div>
+            </div>
+          </div>
+
+          <div class="poster-card hoverable">
+            <div class="poster-img-wrap">
+              <img class="poster-img" src="coke.jpg" alt="Coke Poster" loading="lazy">
+              <div class="poster-depth-layer"></div>
+            </div>
+            <div class="poster-card-overlay"></div>
+            <div class="poster-card-info">
+              <span class="poster-card-tag">Brand Identity</span>
+              <div class="poster-card-name">COKE</div>
+            </div>
+          </div>
+
+          <div class="poster-card hoverable">
+            <div class="poster-img-wrap">
+              <img class="poster-img" src="condensed.jpg" alt="Condensed Poster" loading="lazy">
+              <div class="poster-depth-layer"></div>
+            </div>
+            <div class="poster-card-overlay"></div>
+            <div class="poster-card-info">
+              <span class="poster-card-tag">Typography</span>
+              <div class="poster-card-name">CONDENSED</div>
+            </div>
+          </div>
+
+          <div class="poster-card hoverable">
+            <div class="poster-img-wrap">
+              <img class="poster-img" src="disco light.jpg" alt="Disco Light Poster" loading="lazy">
+              <div class="poster-depth-layer"></div>
+            </div>
+            <div class="poster-card-overlay"></div>
+            <div class="poster-card-info">
+              <span class="poster-card-tag">Visual Art</span>
+              <div class="poster-card-name">DISCO LIGHT</div>
+            </div>
+          </div>
+
+          <div class="poster-card hoverable">
+            <div class="poster-img-wrap">
+              <img class="poster-img" src="ewwww.jpg" alt="Ewwww Poster" loading="lazy">
+              <div class="poster-depth-layer"></div>
+            </div>
+            <div class="poster-card-overlay"></div>
+            <div class="poster-card-info">
+              <span class="poster-card-tag">Experimental</span>
+              <div class="poster-card-name">EWWWW</div>
+            </div>
+          </div>
+
+          <div class="poster-card hoverable">
+            <div class="poster-img-wrap">
+              <img class="poster-img" src="him-2.jpg" alt="Him Poster" loading="lazy">
+              <div class="poster-depth-layer"></div>
+            </div>
+            <div class="poster-card-overlay"></div>
+            <div class="poster-card-info">
+              <span class="poster-card-tag">Portrait</span>
+              <div class="poster-card-name">HIM</div>
+            </div>
+          </div>
+
+          <div class="poster-card hoverable">
+            <div class="poster-img-wrap">
+              <img class="poster-img" src="matchstick.jpg" alt="Matchstick Poster" loading="lazy">
+              <div class="poster-depth-layer"></div>
+            </div>
+            <div class="poster-card-overlay"></div>
+            <div class="poster-card-info">
+              <span class="poster-card-tag">Conceptual</span>
+              <div class="poster-card-name">MATCHSTICK</div>
+            </div>
+          </div>
+
+          <div class="poster-card hoverable">
+            <div class="poster-img-wrap">
+              <img class="poster-img" src="noctra.jpg" alt="Noctra Poster" loading="lazy">
+              <div class="poster-depth-layer"></div>
+            </div>
+            <div class="poster-card-overlay"></div>
+            <div class="poster-card-info">
+              <span class="poster-card-tag">Dark Art</span>
+              <div class="poster-card-name">NOCTRA</div>
+            </div>
+          </div>
+
+          <div class="poster-card hoverable">
+            <div class="poster-img-wrap">
+              <img class="poster-img" src="overdrive.jpg" alt="Overdrive Poster" loading="lazy">
+              <div class="poster-depth-layer"></div>
+            </div>
+            <div class="poster-card-overlay"></div>
+            <div class="poster-card-info">
+              <span class="poster-card-tag">Street Art</span>
+              <div class="poster-card-name">OVERDRIVE</div>
+            </div>
+          </div>
+
+          <div class="poster-card hoverable">
+            <div class="poster-img-wrap">
+              <img class="poster-img" src="pole-3.jpg" alt="Pole Poster" loading="lazy">
+              <div class="poster-depth-layer"></div>
+            </div>
+            <div class="poster-card-overlay"></div>
+            <div class="poster-card-info">
+              <span class="poster-card-tag">Photography</span>
+              <div class="poster-card-name">POLE</div>
+            </div>
+          </div>
+
+          <div class="poster-card hoverable">
+            <div class="poster-img-wrap">
+              <img class="poster-img" src="saint.jpg" alt="Saint Poster" loading="lazy">
+              <div class="poster-depth-layer"></div>
+            </div>
+            <div class="poster-card-overlay"></div>
+            <div class="poster-card-info">
+              <span class="poster-card-tag">Aesthetic</span>
+              <div class="poster-card-name">SAINT</div>
+            </div>
+          </div>
+
+          <div class="poster-card hoverable">
+            <div class="poster-img-wrap">
+              <img class="poster-img" src="yanaahh.jpg" alt="Yanaahh Poster" loading="lazy">
+              <div class="poster-depth-layer"></div>
+            </div>
+            <div class="poster-card-overlay"></div>
+            <div class="poster-card-info">
+              <span class="poster-card-tag">Visual Art</span>
+              <div class="poster-card-name">YANAAHH</div>
+            </div>
+          </div>
+
+        </div><!-- end track -->
+      </div><!-- end sticky-inner -->
+    </div><!-- end sticky-outer -->
+
+    <!-- Progress dots (below sticky, normal flow) -->
+    <div class="works-progress" id="worksProgress" style="padding: 2rem 0 1rem;"></div>
+
+  </section>
+
+  <div class="glow-divider"></div>
+
+  <!-- VIDEOS -->
+  <section id="videos">
+    <div class="section-label reveal">Cinematic Edits</div>
+    <h2 class="section-title reveal reveal-delay-1">Motion that <em>captivates</em></h2>
+
+    <div class="videos-grid reveal reveal-delay-2">
+
+      <div class="video-card hoverable">
+        <video src="azdsgvgbazdbg.mp4" muted loop playsinline></video>
+        <div class="video-play-icon">▶</div>
+        <div class="video-overlay">
+          <div class="video-type-tag">Edit</div>
+          <div class="video-title">AZDSGVGBAZDBG</div>
+        </div>
+      </div>
+
+      <div class="video-card hoverable">
+        <video src="bablu ka edit.mp4" muted loop playsinline></video>
+        <div class="video-play-icon">▶</div>
+        <div class="video-overlay">
+          <div class="video-type-tag">Edit</div>
+          <div class="video-title">BABLU KA EDIT</div>
+        </div>
+      </div>
+
+      <div class="video-card hoverable">
+        <video src="cha bbg.mp4" muted loop playsinline></video>
+        <div class="video-play-icon">▶</div>
+        <div class="video-overlay">
+          <div class="video-type-tag">Edit</div>
+          <div class="video-title">CHA BBG</div>
+        </div>
+      </div>
+
+      <div class="video-card hoverable">
+        <video src="final ds.mp4" muted loop playsinline></video>
+        <div class="video-play-icon">▶</div>
+        <div class="video-overlay">
+          <div class="video-type-tag">Cinematic</div>
+          <div class="video-title">FINAL DS</div>
+        </div>
+      </div>
+
+      <div class="video-card hoverable">
+        <video src="muzhaat final_1.mp4" muted loop playsinline></video>
+        <div class="video-play-icon">▶</div>
+        <div class="video-overlay">
+          <div class="video-type-tag">Cinematic</div>
+          <div class="video-title">MUZHAAT FINAL 1</div>
+        </div>
+      </div>
+
+      <div class="video-card hoverable">
+        <video src="toji hell yeah.mp4" muted loop playsinline></video>
+        <div class="video-play-icon">▶</div>
+        <div class="video-overlay">
+          <div class="video-type-tag">AMV</div>
+          <div class="video-title">TOJI HELL YEAH</div>
+        </div>
+      </div>
+
+      <div class="video-card hoverable">
+        <video src="zorooooo.mp4" muted loop playsinline></video>
+        <div class="video-play-icon">▶</div>
+        <div class="video-overlay">
+          <div class="video-type-tag">AMV</div>
+          <div class="video-title">ZOROOOOO</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="glow-divider"></div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-inner">
+      <div class="about-visual">
+        <div class="about-ring"></div>
+        <div class="about-ring"></div>
+        <div class="about-ring"></div>
+        <div class="about-avatar-wrap">
+          <div class="about-avatar-fill">✦</div>
+        </div>
+        <div class="about-floating-tag t1">Designing since 14</div>
+        <div class="about-floating-tag t2">Freelance Ready</div>
+        <div class="about-floating-tag t3">✦ Self-Taught</div>
+      </div>
+      <div class="about-content">
+        <div class="section-label reveal">About Me</div>
+        <h2 class="section-title reveal reveal-delay-1">Young in age,<br><em>sharp in vision</em></h2>
+        <p class="about-body reveal reveal-delay-2">
+          I'm 17 — and I've been designing since I was 14. Not because someone told me to, but because making things
+          that didn't exist before is the only thing that actually keeps my attention. I took Science with Maths not
+          because I had to, but because I don't like theory for theory's sake. Engineering was never the plan — design
+          always was.
+        </p>
+        <p class="about-body reveal reveal-delay-3">
+          I chose to pursue design because it sits right at the edge of thinking and making. Every poster, every visual,
+          every layout is a problem I get to solve with aesthetics. I've already done 3–4 freelance projects and I'm
+          just getting started. The best thing about starting young? You're fearless enough to try anything — and hungry
+          enough to keep going.
+        </p>
+        <div class="about-stats">
+          <div class="stat-card reveal reveal-delay-1">
+            <div class="stat-number">17</div>
+            <div class="stat-label">Years Old</div>
+          </div>
+          <div class="stat-card reveal reveal-delay-2">
+            <div class="stat-number">3yr</div>
+            <div class="stat-label">Designing</div>
+          </div>
+          <div class="stat-card reveal reveal-delay-3">
+            <div class="stat-number">4+</div>
+            <div class="stat-label">Freelance</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-divider"></div>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="skills-inner">
+      <div class="section-label reveal">Capabilities</div>
+      <h2 class="section-title reveal reveal-delay-1">Skills that <em>define the work</em></h2>
+
+      <!-- Software skills with logos + progress bars -->
+      <div class="skills-software">
+
+        <!-- Photoshop -->
+        <div class="skill-bar-card hoverable reveal reveal-delay-1">
+          <div class="skill-software-header">
+            <div class="skill-software-logo skill-logo-ps">
+              <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+                <rect x="12" y="12" width="216" height="216" rx="45" fill="#001E36" stroke="#31A8FF" stroke-width="14" />
+                <text x="120" y="156" font-family="-apple-system, BlinkMacSystemFont, Arial, sans-serif" font-weight="900" font-size="105" fill="#31A8FF" text-anchor="middle" letter-spacing="-5">Ps</text>
+              </svg>
+            </div>
+            <div>
+              <div class="skill-software-name">Photoshop</div>
+              <div class="skill-software-sub">Adobe Creative Cloud</div>
+            </div>
+            <div class="skill-pct-label">95%</div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-pct="95"></div>
+          </div>
+        </div>
+
+        <!-- Illustrator -->
+        <div class="skill-bar-card hoverable reveal reveal-delay-2">
+          <div class="skill-software-header">
+            <div class="skill-software-logo skill-logo-ai">
+              <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+                <rect x="12" y="12" width="216" height="216" rx="45" fill="#330000" stroke="#FF9A00" stroke-width="14" />
+                <text x="120" y="156" font-family="-apple-system, BlinkMacSystemFont, Arial, sans-serif" font-weight="900" font-size="105" fill="#FF9A00" text-anchor="middle" letter-spacing="-5">Ai</text>
+              </svg>
+            </div>
+            <div>
+              <div class="skill-software-name">Illustrator</div>
+              <div class="skill-software-sub">Adobe Creative Cloud</div>
+            </div>
+            <div class="skill-pct-label">90%</div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-pct="90"></div>
+          </div>
+        </div>
+
+        <!-- After Effects -->
+        <div class="skill-bar-card hoverable reveal reveal-delay-3">
+          <div class="skill-software-header">
+            <div class="skill-software-logo skill-logo-ae">
+              <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+                <rect x="12" y="12" width="216" height="216" rx="45" fill="#00005C" stroke="#9999FF" stroke-width="14" />
+                <text x="120" y="156" font-family="-apple-system, BlinkMacSystemFont, Arial, sans-serif" font-weight="900" font-size="105" fill="#9999FF" text-anchor="middle" letter-spacing="-5">Ae</text>
+              </svg>
+            </div>
+            <div>
+              <div class="skill-software-name">After Effects</div>
+              <div class="skill-software-sub">Adobe Creative Cloud</div>
+            </div>
+            <div class="skill-pct-label">95%</div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-pct="95"></div>
+          </div>
+        </div>
+
+        <!-- Premiere Pro -->
+        <div class="skill-bar-card hoverable reveal reveal-delay-4">
+          <div class="skill-software-header">
+            <div class="skill-software-logo skill-logo-pr">
+              <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+                <rect x="12" y="12" width="216" height="216" rx="45" fill="#00005C" stroke="#EA77FF" stroke-width="14" />
+                <text x="120" y="156" font-family="-apple-system, BlinkMacSystemFont, Arial, sans-serif" font-weight="900" font-size="105" fill="#EA77FF" text-anchor="middle" letter-spacing="-5">Pr</text>
+              </svg>
+            </div>
+            <div>
+              <div class="skill-software-name">Premiere Pro</div>
+              <div class="skill-software-sub">Adobe Creative Cloud</div>
+            </div>
+            <div class="skill-pct-label">85%</div>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar" data-pct="85"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Creative Skills floating tags -->
+      <div class="skills-creative-label">Creative Disciplines</div>
+      <div class="skills-creative-area">
+        <div class="creative-tag hoverable">Typography</div>
+        <div class="creative-tag hoverable">Poster Design</div>
+        <div class="creative-tag hoverable">Video Editing</div>
+        <div class="creative-tag hoverable">Color Grading</div>
+        <div class="creative-tag hoverable">Visual Storytelling</div>
+        <div class="creative-tag hoverable">Social Media Design</div>
+        <div class="creative-tag hoverable">Branding Basics</div>
+      </div>
+
+      <!-- Skills marquee -->
+      <div class="skills-marquee-wrap">
+        <div class="skills-marquee-track">
+          <span class="sm-accent">Composition</span><span>·</span>
+          <span>Negative Space</span><span>·</span>
+          <span class="sm-accent">Hierarchy</span><span>·</span>
+          <span>Grid Systems</span><span>·</span>
+          <span class="sm-accent">Texture &amp; Grain</span><span>·</span>
+          <span>Glitch Art</span><span>·</span>
+          <span class="sm-accent">Retouching</span><span>·</span>
+          <span>Keyframing</span><span>·</span>
+          <span class="sm-accent">Transitions</span><span>·</span>
+          <span>Sound Sync</span><span>·</span>
+          <!-- duplicate -->
+          <span class="sm-accent">Composition</span><span>·</span>
+          <span>Negative Space</span><span>·</span>
+          <span class="sm-accent">Hierarchy</span><span>·</span>
+          <span>Grid Systems</span><span>·</span>
+          <span class="sm-accent">Texture &amp; Grain</span><span>·</span>
+          <span>Glitch Art</span><span>·</span>
+          <span class="sm-accent">Retouching</span><span>·</span>
+          <span>Keyframing</span><span>·</span>
+          <span class="sm-accent">Transitions</span><span>·</span>
+          <span>Sound Sync</span><span>·</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="glow-divider"></div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="section-label reveal">What I Do</div>
+    <h2 class="section-title reveal reveal-delay-1">Services built for <em>ambitious visions</em></h2>
+    <div class="services-grid">
+      <div class="service-card hoverable reveal reveal-delay-1">
+        <div class="service-num">01</div>
+        <div class="service-icon">🎨</div>
+        <div class="service-name">Brand &amp; Identity</div>
+        <div class="service-desc">Complete visual identity from logo systems to full brand guidelines — designed to
+          endure.</div>
+      </div>
+      <div class="service-card hoverable reveal reveal-delay-2">
+        <div class="service-num">02</div>
+        <div class="service-icon">🖼️</div>
+        <div class="service-name">Custom Posters</div>
+        <div class="service-desc">Focusing on creative visuals, storytelling, and highly aesthetic compositions tailored
+          to leave a lasting impact.</div>
+      </div>
+      <div class="service-card hoverable reveal reveal-delay-3">
+        <div class="service-num">03</div>
+        <div class="service-icon">🎬</div>
+        <div class="service-name">Video Editing</div>
+        <div class="service-desc">Delivering cinematic edits, perfectly timed smooth transitions, and compelling visual
+          storytelling to drive maximum engagement.</div>
+      </div>
+      <div class="service-card hoverable reveal reveal-delay-4">
+        <div class="service-num">04</div>
+        <div class="service-icon">✦</div>
+        <div class="service-name">Social Media Design</div>
+        <div class="service-desc">Eye-catching content built for feeds — optimized for scroll-stopping impact and brand
+          consistency.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-divider"></div>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="section-label reveal">Let's Talk</div>
+      <h2 class="section-title reveal reveal-delay-1">Ready to build something <em>extraordinary?</em></h2>
+      <p class="contact-sub reveal reveal-delay-2">Whether you have a clear vision or just the spark of an idea — let's
+        turn it into something the world hasn't seen yet.</p>
+      <div class="contact-info-grid reveal reveal-delay-3">
+        <div class="contact-info-card hoverable">
+          <div class="info-card-label">Email</div>
+          <a href="mailto:gadhiyajheel@gmail.com" class="info-card-link">gadhiyajheel@gmail.com</a>
+          <a href="mailto:mamta190285@gmail.com" class="info-card-link">mamta190285@gmail.com</a>
+        </div>
+
+        <div class="contact-info-card hoverable">
+          <div class="info-card-label">Instagram</div>
+          <a href="https://www.instagram.com/retroedittz" target="_blank" class="info-card-link">@retroedittz</a>
+          <a href="https://www.instagram.com/jeelipopp/" target="_blank" class="info-card-link">@jeelipopp</a>
+        </div>
+
+        <div class="contact-info-card hoverable">
+          <div class="info-card-label">Phone</div>
+          <a href="tel:9016052047" class="info-card-link">9016052047</a>
+          <a href="tel:9429076631" class="info-card-link">9429076631</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-logo">PORTFOLIO SHOWCASE</span>
+    <span class="footer-copy">© 2025 Portfolio Showcase. All rights reserved.</span>
+    <div class="footer-socials">
+      <a href="#" class="hoverable">in</a>
+      <a href="#" class="hoverable">tw</a>
+      <a href="#" class="hoverable">be</a>
+      <a href="#" class="hoverable">gh</a>
+    </div>
+  </footer>
+
+  <!-- JS Modules (IIFE pattern — no server needed) -->
+  <script src="src/js/canvas.js" defer></script>
+  <script src="src/js/cursor.js" defer></script>
+  <script src="src/js/carousel.js" defer></script>
+  <script src="src/js/reveals.js" defer></script>
+  <script src="src/js/videos.js" defer></script>
+
+  <!-- Initialize everything -->
+  <script defer>
+    window.addEventListener('DOMContentLoaded', function () {
+      // Initialize Lenis smooth scroll
+      if (window.Lenis) {
+        var lenis = new Lenis({
+          duration: 1.2,
+          easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
+          orientation: 'vertical',
+          gestureOrientation: 'vertical',
+          smoothWheel: true,
+          wheelMultiplier: 1,
+          touchMultiplier: 2,
+          infinite: false,
+        });
+
+        // Connect Lenis to GSAP ScrollTrigger
+        if (window.gsap && window.ScrollTrigger) {
+          lenis.on('scroll', ScrollTrigger.update);
+          gsap.ticker.add(function (time) {
+            lenis.raf(time * 1000);
+          });
+          gsap.ticker.lagSmoothing(0);
+        } else {
+          function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+          }
+          requestAnimationFrame(raf);
+        }
+      }
+
+      // Initialize all modules
+      if (window.initCanvas) window.initCanvas();
+      if (window.initCursor) window.initCursor();
+      if (window.initCarousel) window.initCarousel();
+      if (window.initReveals) window.initReveals();
+      if (window.initVideos) window.initVideos();
+    });
+  </script>
+</body>
+
+</html>
