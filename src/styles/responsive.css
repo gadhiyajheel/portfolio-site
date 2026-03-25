@@ -29,13 +29,42 @@
   }
 
   /* ── Hero ─── */
-  #hero { text-align: center; padding: 0 1.2rem !important; min-height: 100svh; }
-  .hero-eyebrow { font-size: 0.55rem; letter-spacing: 0.2em; margin-bottom: 1rem; }
-  .hero-title { font-size: clamp(2.2rem, 12vw, 4rem) !important; margin-bottom: 1rem; }
-  .hero-sub { font-size: 0.85rem; max-width: 90vw; margin-bottom: 2rem; line-height: 1.6; }
-  .hero-ctas { justify-content: center; gap: 0.8rem; }
-  .btn-primary, .btn-secondary { font-size: 0.7rem; padding: 0.75rem 1.6rem; }
-  .hero-orb { width: min(80vw, 300px); height: min(80vw, 300px); }
+  #hero {
+    text-align: center !important;
+    padding: 0 1.2rem !important;
+    min-height: 100svh;
+    overflow: visible;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .hero-eyebrow {
+    font-size: 0.5rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.8rem;
+    text-align: center !important;
+    width: 100%;
+  }
+  .hero-title {
+    font-size: clamp(1.8rem, 9vw, 3rem) !important;
+    margin-bottom: 0.8rem;
+    line-height: 1 !important;
+    text-align: center !important;
+    width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  .hero-sub {
+    font-size: 0.82rem;
+    max-width: 92%;
+    margin: 0 auto 1.8rem;
+    line-height: 1.6;
+    text-align: center !important;
+  }
+  .hero-ctas { justify-content: center; gap: 0.8rem; flex-wrap: wrap; width: 100%; }
+  .btn-primary, .btn-secondary { font-size: 0.68rem; padding: 0.7rem 1.4rem; }
+  .hero-orb { width: min(70vw, 260px); height: min(70vw, 260px); }
   .scroll-hint { bottom: 1.5rem; }
   .scroll-line { height: 30px; }
 
