@@ -7,19 +7,19 @@ const POSTERS = [
   { id: 4, src: "Nokia-4.jpg", tag: "Retro Tech", title: "NOKIA" },
   { id: 5, src: "Tornado.jpg", tag: "Nature", title: "TORNADO" },
   { id: 6, src: "arctic mokeys-4.png", tag: "Music", title: "ARCTIC MONKEYS" },
-  { id: 7, src: "chasma.png", tag: "Editorial", title: "CHASMA" },
+  { id: 7, src: "chasma.png", tag: "Editorial", title: "CHROME HEARTS" },
   { id: 8, src: "coke.jpg", tag: "Brand Identity", title: "COKE" },
   { id: 9, src: "condensed.jpg", tag: "Typography", title: "CONDENSED" },
   { id: 10, src: "disco light.jpg", tag: "Visual Art", title: "DISCO LIGHT" },
-  { id: 11, src: "ewwww.jpg", tag: "Experimental", title: "EWWWW" },
+  { id: 11, src: "ewwww.jpg", tag: "Experimental", title: "ADDICTION" },
   { id: 12, src: "him-2.jpg", tag: "Portrait", title: "HIM" },
   { id: 13, src: "matchstick.jpg", tag: "Conceptual", title: "MATCHSTICK" },
   { id: 14, src: "noctra.jpg", tag: "Dark Art", title: "NOCTRA" },
   { id: 15, src: "overdrive.jpg", tag: "Street Art", title: "OVERDRIVE" },
-  { id: 16, src: "pole-3.jpg", tag: "Photography", title: "POLE" },
+  { id: 16, src: "pole-3.jpg", tag: "Photography", title: "LIGHT POLE" },
   { id: 17, src: "saint.jpg", tag: "Aesthetic", title: "SAINT" },
-  { id: 18, src: "yanaahh.jpg", tag: "Visual Art", title: "YANAAHH" },
-  { id: 19, src: "ideny-me.jpg", tag: "Visual Art", title: "IDENY ME" }
+  { id: 18, src: "yanaahh.jpg", tag: "Visual Art", title: "YANA" },
+  { id: 19, src: "ideny-me.png", tag: "Visual Art", title: "PCRC" }
 ];
 
 export default function Works() {
