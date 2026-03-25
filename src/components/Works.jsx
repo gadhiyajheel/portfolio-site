@@ -18,7 +18,8 @@ const POSTERS = [
   { id: 15, src: "overdrive.jpg", tag: "Street Art", title: "OVERDRIVE" },
   { id: 16, src: "pole-3.jpg", tag: "Photography", title: "POLE" },
   { id: 17, src: "saint.jpg", tag: "Aesthetic", title: "SAINT" },
-  { id: 18, src: "yanaahh.jpg", tag: "Visual Art", title: "YANAAHH" }
+  { id: 18, src: "yanaahh.jpg", tag: "Visual Art", title: "YANAAHH" },
+  { id: 19, src: "ideny-me.jpg", tag: "Visual Art", title: "IDENY ME" }
 ];
 
 export default function Works() {
