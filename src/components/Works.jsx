@@ -19,7 +19,8 @@ const POSTERS = [
   { id: 16, src: "pole-3.jpg", tag: "Photography", title: "LIGHT POLE" },
   { id: 17, src: "saint.jpg", tag: "Aesthetic", title: "SAINT" },
   { id: 18, src: "yanaahh.jpg", tag: "Visual Art", title: "YANA" },
-  { id: 19, src: "ideny-me.png", tag: "Visual Art", title: "PCRC" }
+  { id: 19, src: "ideny-me.png", tag: "Visual Art", title: "PCRC" },
+  { id: 20, src: "every-word.jpg", tag: "Typography", title: "EVERY WORD RETURNS" }
 ];
 
 export default function Works() {
